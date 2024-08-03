@@ -42,6 +42,7 @@ Some parts must be used, but that's mentioned separately per component.
 ## Power sources
 ### Power for motors
 **2x 3,7 Li-ion rechargeable batteries in series (7,4 V nominal voltage, 8,4 V fully charged).**
+Needs at least a polyfude
 
 Two 3.7V Li-ion batteries in series providing a nominal voltage of 7.4V (8.4V fully charged). 
 This setup supports high current supply (5A per cell) and offers a capacity of 2000mAh to 3000mAh. 
@@ -50,6 +51,7 @@ the desired level. This configuration ensures a stable and efficient power sourc
 
 ### Power for Arduino microcontrollers
 **2x 3,7 Li-ion rechargeable batteries in series (7,4 V nominal voltage, 8,4 V fully charged).**
+Needs at least a polyfude
 
 The power source for the computers and electronics of the robot car consists of two 3.7V Li-ion 
 batteries arranged in series, providing a nominal voltage of 7.4V (8.4V when fully charged). 
