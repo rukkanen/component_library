@@ -31,7 +31,7 @@ Some parts must be used, but that's mentioned separately per component.
 - Dimensions (wheel) 65 x 27 mm
 - Car Weight 0.5 kg
 
-#### Engine specs
+#### Engine specs'
 | Voltage DC V | Idle current mA | Idle rpm +- 10% | Torque gf/cm min. |
 |--------------|-----------------|-----------------|-------------------|
 | 4.5          | 190             | 90              | 800               |
@@ -40,9 +40,27 @@ Some parts must be used, but that's mentioned separately per component.
 | 9            | 200             | 300             | 1200              |
 
 ## Power sources
+
+The RoboCar has 4 Li-ion batteries which means that care must be taken to make sure that the 
+batteries dont get shortcircuited and that their heat dissipation is taken care of.
+
+For the Arduino robot, use the MF-R110AP polyfuse (Hold 1.10A, Trip 2.2A) in series with the 
+positive line from the battery to the step-down converters to protect the electronics. For motor 
+protection, use the MF-R400 polyfuse (Hold 4.0A, Trip 8.0A) in series with the positive line 
+from the battery to the motor controller. Additionally, employ a 7.5A automotive blade fuse (ATC-7.5) 
+in the power supply line to the motors. Utilize step-down converters to provide 5V for the 
+Arduino and 3V for the ESP-01. Apply 3M 8810 thermal pads on high-power components for heat management.
+
+If it turns out that the Li-ion setup is too difficult it must be changed to something else.
+
+#### Possible polyfuses:
+- MF-R90 hold 0.90A trip 1.8A
+- MF-R110AP hold 1.10A trip 2.2A
+- MF-R135 hold 1.35A trip 2.7A
+- MF-R400 hold 4.0A trip 8.0A
+
 ### Power for motors
 **2x 3,7 Li-ion rechargeable batteries in series (7,4 V nominal voltage, 8,4 V fully charged).**
-Needs at least a polyfude
 
 Two 3.7V Li-ion batteries in series providing a nominal voltage of 7.4V (8.4V fully charged). 
 This setup supports high current supply (5A per cell) and offers a capacity of 2000mAh to 3000mAh. 
@@ -51,7 +69,6 @@ the desired level. This configuration ensures a stable and efficient power sourc
 
 ### Power for Arduino microcontrollers
 **2x 3,7 Li-ion rechargeable batteries in series (7,4 V nominal voltage, 8,4 V fully charged).**
-Needs at least a polyfude
 
 The power source for the computers and electronics of the robot car consists of two 3.7V Li-ion 
 batteries arranged in series, providing a nominal voltage of 7.4V (8.4V when fully charged). 
@@ -61,23 +78,51 @@ such as the ultrasound sensor, microwave radar, and LEDs. This configuration ens
 and high-capacity power supply, delivering efficient and reliable power distribution across all 
 electronic components in the robot car.
 
+## Moving structures
+The robocar is equipped with an HS-SR04 ultrasound sensor mounted on a servo, allowing it to scan 
+the front area for obstacles. This helps the robocar detect and avoid collisions. Additionally, 
+the robocar has an OV7670 camera on a pan/tilt mount, controlled by two servos. This setup lets 
+the camera move around to capture a wide view of the surroundings. These features work together 
+to help the robocar navigate and understand its environment better. Currently there are no plans
+to use the camera for obstacle avoidance, but it can be used for that purpose if needed.
+
+## Lights
+The RoboCar has a few leds around it to signify that it's active. The leds must be at a very low
+power not to disturb people around it. Theres a set of leds which show that the car has power and
+a set of leds which turn on a moment before it start moving and turn off a second after it stops.
+
+The on option to integrate a bright led to the camera which can be turned on by an ambient light
+sensor. This can be used to take pictures in dark places.
+
 ## Components which are available to use
 - Breadboard (17, 30 and 60 row version available)
     - The robocar contain at least one 60-row breadboard
     - We can add very small 17-row breadboards if needed for difficult places
+    - @TODO decide at start the board setup. 
 - LM2596 DC-DC Converter Module and XL6009E1 DC-DC Converter Module
-- 
+- 4x motors (as mentioned before)
+    - TI SN754410NE H-Bridge Motor Driver for controlling the motors
+    - 4x TCRT5000 IR Infrared Sensor for measuring the speed of the motors
+- 4x 18650 Li-ion battery holder
+    - 4x 18650 Li-ion batteries
+    - 4x 18650 Li-ion battery charger
+- TEMT6000 Ambient Light Sensor for controlling the camera light among other things
+- Flyduino - A 12 Servo Controller (Arduino Compatible)
+- A 10KO potentiometer for speed control
 - SparkFun microSD Transflash Breakout (for storing nav data and potential maps)
 - resistors, leds, potentiometers, buttons and basic components when needed
 
 ## General pictures of RoboCard
 
-```
-![Photo of a chassis](./1_chassis.jpg)
-![Photo of a chassis](./2_chassis.jpg)
-![Photo of a chassis](./3_motor_picture.jpg)
-![Photo of a chassis](./4_structure_schematic.jpg)
-```
+**Pictures are free to use for all** 
+
+![Photo of a chassis](11_chassis.jpg)
+![Photo of a chassis](1_chassis.jpg)
+![Photo of a chassis](2_chassis.jpg)
+![Photo of a chassis](22_chassis.jpg)
+![Photo of a chassis](3_motor.jpg)
+![Photo of a chassis](4_corner.jpg)
+
 ## Placement of components in the robot car chassis
 
 

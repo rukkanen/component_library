@@ -165,10 +165,6 @@ The SN754410NE is a quadruple high-current half-H driver designed to provide bid
 - Controlling the direction and speed of DC motors
 - Stepper motor driver for precise control in robotic arms
 
----
-
-
-
 ## Component: LM2596 DC-DC Converter Module
 The LM2596 DC-DC converter module is a buck (step-down) voltage regulator. It can step down an input voltage (IN+) to a lower output voltage (OUT+).
 
