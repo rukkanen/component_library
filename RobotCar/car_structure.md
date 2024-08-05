@@ -78,7 +78,7 @@ such as the ultrasound sensor, microwave radar, and LEDs. This configuration ens
 and high-capacity power supply, delivering efficient and reliable power distribution across all 
 electronic components in the robot car.
 
-## Moving structures
+## Moving structures, camera mount and ultrasuond radar in front
 The robocar is equipped with an HS-SR04 ultrasound sensor mounted on a servo, allowing it to scan 
 the front area for obstacles. This helps the robocar detect and avoid collisions. Additionally, 
 the robocar has an OV7670 camera on a pan/tilt mount, controlled by two servos. This setup lets 

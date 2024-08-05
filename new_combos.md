@@ -306,3 +306,33 @@ The 5V microUSB 1A 18650 Lithium Battery Charging Board Charger Module is design
 
 ### Summary
 The 5V microUSB 1A 18650 Lithium Battery Charging Board Charger Module is an excellent solution for efficiently and safely charging 18650 lithium batteries. Its built-in protection circuits, easy-to-use microUSB input, and compact size make it ideal for various portable and DIY electronic projects.
+
+**KY-033 Infrared Line Tracking Sensor**
+
+**Description:**  
+The Infrared Line Tracking Sensor is designed for use in robotics and automation projects to detect and follow a line. It uses infrared light to detect the difference in reflectivity between the line and the background surface, providing a digital output signal indicating the presence or absence of the line.
+
+**Features:**
+- **Model:** Infrared Line Tracking Sensor
+- **Type:** Reflective Infrared Sensor
+- **Operating Voltage:** 3.3V to 5V
+- **Output Type:** Digital
+- **Detection Range:** 0.1 cm to 1.5 cm (optimal range varies with surface reflectivity)
+- **Adjustable Sensitivity:** Yes, via onboard potentiometer
+- **Mounting Hole:** Provided for secure attachment
+
+**Pin Configuration:**
+- **Pin 1 (OUT):** Digital output signal
+- **Pin 2 (VCC):** Power supply (3.3V to 5V)
+- **Pin 3 (GND):** Ground
+
+**Applications:**
+- Line-following robots
+- Edge detection in robotic projects
+- Object sorting on conveyor belts based on line marking
+
+**Links:**
+- [Datasheet](https://arduinomodules.info/ky-033-line-tracking-sensor-module)
+- [Fritzing File](https://electropeak.com/learn/interfacing-tcrt5000-infrared-line-tracking-sensor-with-arduino)
+- [Additional Resource](https://www.electroniclinic.com/ky-033-line-tracking-sensor-arduino-circuit-and-programming)
+++
