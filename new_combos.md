@@ -307,7 +307,7 @@ The 5V microUSB 1A 18650 Lithium Battery Charging Board Charger Module is design
 ### Summary
 The 5V microUSB 1A 18650 Lithium Battery Charging Board Charger Module is an excellent solution for efficiently and safely charging 18650 lithium batteries. Its built-in protection circuits, easy-to-use microUSB input, and compact size make it ideal for various portable and DIY electronic projects.
 
-**KY-033 Infrared Line Tracking Sensor**
+## KY-033 Infrared Line Tracking Sensor
 
 **Description:**  
 The Infrared Line Tracking Sensor is designed for use in robotics and automation projects to detect and follow a line. It uses infrared light to detect the difference in reflectivity between the line and the background surface, providing a digital output signal indicating the presence or absence of the line.
