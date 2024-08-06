@@ -20,6 +20,11 @@ The robot will make a map of the appartment it is in and store it on a microSD c
     - **ARD2** which is the ESP-01 and OV7670 Arduino SW project.
     - **ESP1WS** which is ESP-01 webserver (and perhaps picture handling) SW project.
 
+## Arduino Microcontrollers
+Two Arduino microcontrollers are integrated into the car's structure using breadboards. These microcontrollers serve as the brain of the car, controlling its movements and processing sensor data. We call them ARD1 and ARD2. ARD1 is responsible for managing the robot's motion, radar, and lights, while ARD2 controls the ESP-01 module and OV7670 camera. The microcontrollers are programmed using C++ and compiled with VS Code and PlatformIO. They are uploaded to the Arduino microcontrollers on the robot car. The microcontrollers are connected to various components, including motors, sensors, and cameras, to enable the robot car to navigate its environment autonomously and capture images. The microcontrollers play a crucial role in the functionality and performance of the robot car, providing the necessary intelligence and control to execute its tasks effectively.
+
+Overall, the physical structure of the robot car is carefully designed to house the necessary components, ensuring optimal functionality and performance.
+
 ### ARD1
 Controls the robot motion and can function as a pathfinder. It also controls the radar and the lights. This project is written in C++ and is compiled with VS Code and PlatformIO. The project is uploaded to the Arduino microcontroller on the robot car. The project is responsible for controlling the robot's motors, radar, and lights. It also includes a pathfinder algorithm that enables the robot to navigate its environment autonomously. The code for this project will be asked from ChatGPT, and placed in github for both developer and chatgpt to use for further reference.
 
@@ -122,7 +127,7 @@ sensor. This can be used to take pictures in dark places.
 The RoboCar is equipped with a SparkFun microSD Transflash Breakout, which allows it to store navigation data and a map. This feature enables the RoboCar to record and save its movements, helping it navigate more efficiently and effectively. The microSD card provides ample storage capacity for storing data, ensuring that the RoboCar can access and utilize the information as needed. By storing navigation data, the RoboCar can enhance its performance and optimize its movements, making it a more reliable and intelligent autonomous vehicle.
 
 ## Camera and storing/sending picture
-There's a lot of space on the microSD card to store pictures. The pictures can be sent to a webserver which can be accessed by the owner of the robot car. The pictures can be stored on the microSD card for later viewing or analysis. The camera can be controlled through the web interface, allowing the user to capture images of the robot car's surroundings. The camera can pan and tilt to capture images from different angles, providing a comprehensive view of the environment. The pictures can be sent to the webserver for viewing or storage, enhancing the robot car's functionality and capabilities.
+There's a lot of space on the microSD card to store pictures. The pictures can be sent to a webserver which can be accessed by the owner of the robot car. The pictures can be stored on the microSD card for later viewing or analysis. The camera can be controlled through the web interface, allowing the user to capture images of the robot car's surroundings. The camera can pan and tilt to capture images from different angles, providing a comprehensive view of the environment. The pictures can be sent to the webserver for viewing or storage, enhancing the robot car's functionality and capabilities. Put as much of the graphics processing to ESP-01 since it has a lot of power.
 
 ## Absolutely all HW components (many might not be needed!)
 - 2x Micro Arduino
@@ -152,13 +157,10 @@ There's a lot of space on the microSD card to store pictures. The pictures can b
     - (called also "KY-033 Line Tracking Sensor Module")
 - MPU6050 Accelerometer and Gyroscope Module if needed for navigation
 - Perhaps a photoresistor to know ambien light levels for the camera or even wake up for the robot when lights are turned on in the appartment
-- 
-
 - Breadboard (17, 30 and 60 row version available)
     - The robocar contain at least one 60-row breadboard
     - We can add very small 17-row breadboards if needed for difficult places
     - @TODO decide what size and which how many breadboards are needed.
-- Flyduino - A 12 Servo Controller (Arduino Compatible)
 - A B10K potentiometer for speed control
 - SparkFun microSD Transflash Breakout (for storing nav data and potential maps)
 - resistors, leds, potentiometers, buttons and basic components if needed
@@ -182,20 +184,6 @@ There's a lot of space on the microSD card to store pictures. The pictures can b
 | Microwave radar        | Located in the middle of the car, positioned above all other components. This placement ensures accurate detection and avoids interference from other elements. |
 | Batteries              | The two (2x18650) battery racks securely hold the batteries, providing a reliable power source for the car. The batteries are strategically placed for easy access and efficient power distribution. |
 | Fuses                  | Placed as close to the batteries as possible, the fuses serve as a protective measure, safeguarding the electronics and motors from potential damage. |
+| Step-down converters   | Positioned near the batteries, the converters regulate the voltage to ensure optimal performance of the Arduino microcontrollers and ESP-01 module. |
 
 
-
-
-## Electronics design
-Dear reader, this is up to you to decide!
-
-## Dimensions
-The length of the robot car is approximately 30cm, providing a compact yet functional size for its intended purpose.
-
-## Sensor Integration
-The structure of the car includes designated spaces to mount sensors. These sensors play a crucial role in gathering data and enabling the car to interact with its environment effectively.
-
-## Arduino Microcontrollers
-Two Arduino microcontrollers are integrated into the car's structure using breadboards. These microcontrollers serve as the brain of the car, controlling its movements and processing sensor data.
-
-Overall, the physical structure of the robot car is carefully designed to house the necessary components, ensuring optimal functionality and performance.
