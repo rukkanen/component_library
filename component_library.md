@@ -451,8 +451,7 @@ The 5V Relay Module allows for control of high voltage devices such as lamps and
 - **Precaution**: Use ESD protection when handling.
 
 **Additional Resources**:
-- [LDR Datasheet](http://example.com/ldr-datasheet)
-- [LDR Tutorial](http://example.com/ldr-tutorial)
+
 
 ### Step Motor and Driver Module
 

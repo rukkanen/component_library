@@ -90,7 +90,7 @@ The power source for the computers and electronics of the robot car consists of 
 and high-capacity power supply, delivering efficient and reliable power distribution across all electronic components in the robot car.
 
 ## Moving structures, camera mount and ultrasuond radar in front
-The robocar is equipped with an HS-SR04 ultrasound sensor mounted on a servo, allowing it to scan the front area for obstacles. This helps the robocar detect and avoid collisions. Additionally, the robocar has an OV7670 camera on a pan/tilt mount, controlled by two servos. This setup lets the camera move around to capture a wide view of the surroundings. These features work together to help the robocar navigate and understand its environment better. Currently there are no plans to use the camera for obstacle avoidance, but it can be used for that purpose if needed.
+The robocar is equipped with an HS-SR04 ultrasound sensor mounted on a servo, allowing it to scan the front area for obstacles. This helps the robocar detect and avoid collisions. Additionally, the robocar has an OV7670 camera on a pan/tilt mount, controlled by two servos. This setup lets the camera move around to capture a wide view of the surroundings. These features work together to help the robocar navigate and understand its environment better. Currently there are no plans to use the camera for obstacle avoidance, but it can be used for that purpose if needed. 
 
 ## Lights
 (Controlled by ARD1)
@@ -100,15 +100,21 @@ The on option to integrate a bright led to the camera which can be turned on by 
 sensor. This can be used to take pictures in dark places.
 
 ## What component is connected to what controller or power.
-| Module    | ard1 | ard2 | ESP-01 | PowerCompute | PowerMotor |
-|-----------|------|------|--------|--------------|------------|
-| Motors    | X    |      |        |              | X          |
-| Radar     | X    |      |        | X            |            |
-| Camera    |      | X    |        | X            |            |
-| CamLight  |      |      | X      | X            |            |
-| Lights    | X    |      |        | X            |            |
-| Web       |      |      | X      | X            |            |
-| Ultrasound| X    |      |        | X            |            |
+
+| Module       | ard1 | ard2 | ESP-01 | PowerCompute | PowerMotor |
+|--------------|------|------|--------|--------------|------------|
+| Motors       | X    |      |        |              | X          |
+| Radar        | X    |      |        | X            |            |
+| Camera       |      | X    |        | X            |            |
+| CamLight     |      |      | X      | X            |            |
+| Lights       | X    |      |        | X            |            |
+| Web          |      |      | X      | X            |            |
+| Ultrasound   | X    |      |        | X            |            |
+| Ultra Servos | X    |      |        | X            |            |
+| NavData      | X    |      |        | X            |            |
+| CamServos    |      | X    |        | X            |            |
+| MotorSpeed   | X    |      |        |              | X          |
+| MotorDriver  | X    |      |        |              | X          |
 **something else?**
 
 ## Navigation and storing navigation data
@@ -117,23 +123,44 @@ The RoboCar is equipped with a SparkFun microSD Transflash Breakout, which allow
 ## Camera and storing/sending picture
 There's a lot of space on the microSD card to store pictures. The pictures can be sent to a webserver which can be accessed by the owner of the robot car. The pictures can be stored on the microSD card for later viewing or analysis. The camera can be controlled through the web interface, allowing the user to capture images of the robot car's surroundings. The camera can pan and tilt to capture images from different angles, providing a comprehensive view of the environment. The pictures can be sent to the webserver for viewing or storage, enhancing the robot car's functionality and capabilities.
 
-## Components which are available to use
+## Absolutely all HW components (many might not be needed!)
+- 2x Micro Arduino
+- ESP-01 8266 breakoutboard
+- 4x 3,7 Li-ion rechargeable batteries in series (7,4 V nominal voltage, 8,4 V fully charged)
+- RCWL-0516 Microwave Radar Sensor
+- HC-SR04 Ultrasound Sensor
+- OV7670 Camera
+- 2x SG90 Servo Motor
+- 1x Pan/Tilt Mount
+- A generic micro servo for the ultrasound sensor
+- 2x 3M 8810 thermal pads (or similar)
+- 2x Step-down converters
+    - LM2596 DC-DC Converter Module 
+    - XL6009E1 DC-DC Converter Module
+    - 1x for 5V for the Arduino microcontrollers
+    - 1x for 3V for the ESP-01 module (please notice that ESP-01 is 3V not 3.3V)
+- 2x polyfuses
+    - MF-R110AP hold 1.10A trip 2.2A
+    - MF-R400 hold 4.0A trip 8.0A
+- 1x 7.5A automotive blade fuse (ATC-7.5)
+    - and holder for it
+- 4x motors
+    - TI SN754410NE H-Bridge Motor Driver for controlling the motors
+    - 4x KY-033 IR Infrared Sensor for measuring the speed of the motors
+- 4x KY-033 IR Infrared Sensor for measuring the speed of the motors
+    - (called also "KY-033 Line Tracking Sensor Module")
+- MPU6050 Accelerometer and Gyroscope Module if needed for navigation
+- Perhaps a photoresistor to know ambien light levels for the camera or even wake up for the robot when lights are turned on in the appartment
+- 
+
 - Breadboard (17, 30 and 60 row version available)
     - The robocar contain at least one 60-row breadboard
     - We can add very small 17-row breadboards if needed for difficult places
     - @TODO decide what size and which how many breadboards are needed.
-- LM2596 DC-DC Converter Module and XL6009E1 DC-DC Converter Module
-- 4x motors
-    - TI SN754410NE H-Bridge Motor Driver for controlling the motors
-    - 4x TCRT5000 IR Infrared Sensor for measuring the speed of the motors
-- 4x 18650 Li-ion battery holder
-    - 4x 18650 Li-ion batteries
-    - 4x 18650 Li-ion battery charger
-- TEMT6000 Ambient Light Sensor for controlling the camera light among other things
 - Flyduino - A 12 Servo Controller (Arduino Compatible)
-- A 10KO potentiometer for speed control
+- A B10K potentiometer for speed control
 - SparkFun microSD Transflash Breakout (for storing nav data and potential maps)
-- resistors, leds, potentiometers, buttons and basic components when needed
+- resistors, leds, potentiometers, buttons and basic components if needed
 
 ## General pictures of RoboCard
 
