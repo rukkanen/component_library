@@ -6,9 +6,12 @@ The Robot Car project aims to create an autonomous vehicle capable of navigating
 The robot will make a map of the appartment it is in and store it on a microSD card. The robot will also store pictures of the people it has seen on the microSD card. The robot will be able to move around and take pictures of its surroundings, providing a comprehensive view of the environment. The robot car will be able to navigate around obstacles and reach its destination. The robot car will be able to move around and capture images of its surroundings, providing a comprehensive view of the environment. 
 
 ### Milestones
-MS1 is only driving and obstacle avoidance
-MS2 is ARD2 and ESP1WS
-MS3 is navigation based on a map.
+| Milestone | Description |
+|-----------|-------------|
+| MS1 | Only driving and obstacle avoidance |
+| MS2 | ARD2 and ESP1WS |
+| MS3 | Navigation based on a map |
+
 
 ## Software Projects
 - VS Code with PlatformIO is used.
