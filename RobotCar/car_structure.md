@@ -8,10 +8,9 @@ The robot will make a map of the appartment it is in and store it on a microSD c
 ### Milestones
 | Milestone | Description |
 |-----------|-------------|
-| MS1 | Only driving and obstacle avoidance |
-| MS2 | ARD2 and ESP1WS |
-| MS3 | Navigation based on a map |
-
+| MS1       | Only driving and obstacle avoidance |
+| MS2       | ARD2 and ESP1WS |
+| MS3       | Navigation based on a map |
 
 ## Software Projects
 - VS Code with PlatformIO is used.
@@ -19,6 +18,9 @@ The robot will make a map of the appartment it is in and store it on a microSD c
     - **ARD1** which is the motor, radar and an pathfinder arduino SW project. 
     - **ARD2** which is the ESP-01 and OV7670 Arduino SW project.
     - **ESP1WS** which is ESP-01 webserver (and perhaps picture handling) SW project.
+
+## Webserver
+This provides a picture from the camera (once per second, less than vga resolution - resolution must be configurable though). There needs to be the controls to set toy/mapping mode or the guard mode. It needs to ask for username and password which are given in the code.
 
 ## Arduino Microcontrollers
 Two Arduino microcontrollers are integrated into the car's structure using breadboards. These microcontrollers serve as the brain of the car, controlling its movements and processing sensor data. We call them ARD1 and ARD2. ARD1 is responsible for managing the robot's motion, radar, and lights, while ARD2 controls the ESP-01 module and OV7670 camera. The microcontrollers are programmed using C++ and compiled with VS Code and PlatformIO. They are uploaded to the Arduino microcontrollers on the robot car. The microcontrollers are connected to various components, including motors, sensors, and cameras, to enable the robot car to navigate its environment autonomously and capture images. The microcontrollers play a crucial role in the functionality and performance of the robot car, providing the necessary intelligence and control to execute its tasks effectively.
@@ -103,6 +105,10 @@ The RoboCar has a few leds around it to signify that it's active. The leds must 
 
 The on option to integrate a bright led to the camera which can be turned on by an ambient light
 sensor. This can be used to take pictures in dark places.
+
+## Voltage monitoring
+The robocar uses a voltage divier module which model code is 
+
 
 ## What component is connected to what controller or power.
 **This info might be wrong!**
