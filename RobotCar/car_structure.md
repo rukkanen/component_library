@@ -100,6 +100,7 @@ The on option to integrate a bright led to the camera which can be turned on by 
 sensor. This can be used to take pictures in dark places.
 
 ## What component is connected to what controller or power.
+**This info might be wrong!**
 
 | Module       | ard1 | ard2 | ESP-01 | PowerCompute | PowerMotor |
 |--------------|------|------|--------|--------------|------------|
@@ -113,7 +114,7 @@ sensor. This can be used to take pictures in dark places.
 | Ultra Servos | X    |      |        | X            |            |
 | NavData      | X    |      |        | X            |            |
 | CamServos    |      | X    |        | X            |            |
-| MotorSpeed   | X    |      |        |              | X          |
+| MotorSpeed   | X    |      |        | X            |            |
 | MotorDriver  | X    |      |        |              | X          |
 **something else?**
 
