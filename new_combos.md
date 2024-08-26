@@ -335,4 +335,28 @@ The Infrared Line Tracking Sensor is designed for use in robotics and automation
 - [Datasheet](https://arduinomodules.info/ky-033-line-tracking-sensor-module)
 - [Fritzing File](https://electropeak.com/learn/interfacing-tcrt5000-infrared-line-tracking-sensor-with-arduino)
 - [Additional Resource](https://www.electroniclinic.com/ky-033-line-tracking-sensor-arduino-circuit-and-programming)
-++
+
+# More
+- **CD74HC00E**  
+  - **Name:** Quad 2-Input NAND Gate  
+  - **Use:** Basic logic operations in decision-making circuits, sensor processing, and control systems.
+
+- **SN74HC04N**  
+  - **Name:** Hex Inverter (NOT Gate)  
+  - **Use:** Signal inversion, generating complementary signals, and creating oscillators.
+
+- **CD74HC08E**  
+  - **Name:** Quad 2-Input AND Gate  
+  - **Use:** Control logic where multiple conditions must be true, such as in safety systems and sensor fusion.
+
+- **SN74HC32N**  
+  - **Name:** Quad 2-Input OR Gate  
+  - **Use:** Logic circuits for event triggers, signal routing, and combining sensor signals.
+
+- **SN74HC163N**  
+  - **Name:** 4-Bit Binary Synchronous Counter  
+  - **Use:** Timing applications, frequency division, counting events, and controlling sequential operations.
+
+- **24LC32A**  
+  - **Name:** 32Kb I²C EEPROM  
+  - **Use:** Non-volatile data storage for saving configurations, settings, or small amounts of data in robotics and automation projects.
