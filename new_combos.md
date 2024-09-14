@@ -1,14 +1,14 @@
 # Component Library
 
 ## Table of Contents
-1. [TI 22CNONK E4](#ti-22cnonk-e4)
+1. [TI SN74HC595](#ti-22cnonk-e4)
 2. [TI L293DNE](#ti-l293dne)
 3. [TI L293D](#ti-l293d)
 4. [TI SN754410NE](#ti-sn754410ne)
 
 ---
 
-## TI 22CNONK E4
+## TI SN74HC595
 **Datasheet:** [SN74HC595](https://www.ti.com/lit/ds/symlink/sn74hc595.pdf?ts=1722662724501&ref_url=https%253A%252F%252Far.mouser.com%252F)
 
 **Description:**  
